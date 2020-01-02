@@ -9,6 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Install Dependencies
+    - name: Building the Docker Image
       run: |
         ./scripts/build.sh
