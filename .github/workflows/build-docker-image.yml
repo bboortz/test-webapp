@@ -12,4 +12,5 @@ jobs:
     - name: Install Dependencies
       run: |
         ls -la
+        ls -la ./scripts
         ./scripts/build.sh
