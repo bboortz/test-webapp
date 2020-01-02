@@ -11,4 +11,5 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install Dependencies
       run: |
+        ls -la
         ./scripts/build.sh
