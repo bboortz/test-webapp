@@ -1,4 +1,4 @@
-name: Test Python application
+name: Test Python Application
 
 on: [push]
 
