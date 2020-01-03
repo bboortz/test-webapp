@@ -1,7 +1,7 @@
 apiVersion: networking.gke.io/v1beta1
 kind: ManagedCertificate
 metadata:
-  name: status-certificate
+  name: test-webapp-certificate
 spec:
   domains:
     - test-webapp.test.benni.tech
