@@ -47,7 +47,6 @@ if [ "${HOST}" == "localhost" ]; then
 	# prepare
 	#
 	source .venv/bin/activate
-fi
 
 	pip install -U -r requirements-test.txt
 
@@ -64,13 +63,14 @@ fi
 	flake8 . --exclude=.venv,OLD --count --select=E9,F63,F7,F82 --show-source --statistics
 	flake8 . --exclude=.venv,OLD --count --max-complexity=10 --max-line-length=127 --statistics
 
+fi
 
 
-	#
-	# running application in dev mode
-	#
-	echo -e "\nRUNNING THE APPLICATION"
-	timeout 10 ./scripts/run.sh > testrun.log 2>&1 &
+#
+# running application in dev mode
+#
+echo -e "\nRUNNING THE APPLICATION"
+timeout 10 ./scripts/run.sh > testrun.log 2>&1 &
 
 
 
