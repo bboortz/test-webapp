@@ -23,7 +23,7 @@ env:
   GITHUB_SHA: ${{ github.sha }}
   GKE_ZONE: us-west1-a
   GKE_CLUSTER: status-test-01
-  IMAGE: status
+  IMAGE: test-webapp
 
 jobs:
   setup-build-publish-deploy:
