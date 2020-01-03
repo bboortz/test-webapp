@@ -6,6 +6,11 @@ Simple Webapp for verifying HTTP(S) Requests
 
 test-webapp is a simple web application written in python in order to verify HTTP(S) requests and responses. This tool is useful fo tracing web requests.
 
+## This project will be build and tested using github actions
+https://github.com/bboortz/test-webapp/workflows/Test%20Python%20Application/badge.svg
+https://github.com/bboortz/test-webapp/workflows/Build%20Docker%20Image/badge.svg
+https://github.com/bboortz/test-webapp/workflows/Deploy%20to%20GKE/badge.svg
+
 
 # Goals
 

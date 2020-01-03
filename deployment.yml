@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: test-webapp-deployment
-        image: gcr.io/test-webapp-262919/test-webapp:1267b7e9b5406f730b39d065a3cd39fd7d76017f
+        image: gcr.io/status-262919/test-webapp:1267b7e9b5406f730b39d065a3cd39fd7d76017f
         ports:
         - containerPort: 5000
         resources:
