@@ -4,4 +4,4 @@ metadata:
   name: test-webapp-certificate
 spec:
   domains:
-    - test-webapp.test.benni.tech
+    - test-webapp.benni.tech
