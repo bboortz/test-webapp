@@ -8,8 +8,7 @@ set -u
 #
 # confg
 #
-HOST="${1:-localhost}"
-PORT="${2:-4444}"
+URL="${1:-http://localhost:4444}"
 CURL="curl --fail --silent -o /dev/null -w %{http_code}"
 ERRORS=0
 
@@ -42,7 +41,7 @@ do_curl() {
 
 
 
-if [ "${HOST}" == "localhost" ]; then
+if [ "${URL}" == "http://localhost:4444" ]; then
 	#
 	# prepare
 	#
@@ -54,7 +53,7 @@ if [ "${HOST}" == "localhost" ]; then
 	#
 	# pytest
 	#
-	# echo -e "\nRUNNING PYTEST UNIT TESTS"
+	# echo -e "\nRUNNINGPYTEST UNIT TESTS"
 	# pytest
 
 
@@ -79,8 +78,8 @@ timeout 10 ./scripts/run.sh > testrun.log 2>&1 &
 #
 echo -e "\nSIMULATING TESTS"
 sleep 1
-do_curl "GET"    "http://${HOST}:${PORT}"              "text/html"        "200"
-do_curl "GET"    "http://${HOST}:${PORT}/"             "text/html"        "200"
-do_curl "GET"    "http://${HOST}:${PORT}/test"         "text/html"        "200"
-do_curl "GET"    "http://${HOST}:${PORT}/api/TEST"     "text/html"        "200"
-do_curl "GET"    "http://${HOST}:${PORT}/api/1234"     "text/html"        "200"
+do_curl "GET"    "${URL}"              "text/html"        "200"
+do_curl "GET"    "${URL}/"             "text/html"        "200"
+do_curl "GET"    "${URL}/test"         "text/html"        "200"
+do_curl "GET"    "${URL}/api/TEST"     "text/html"        "200"
+do_curl "GET"    "${URL}/api/1234"     "text/html"        "200"
